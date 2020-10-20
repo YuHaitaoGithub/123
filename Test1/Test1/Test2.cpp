@@ -1,9 +1,9 @@
-//#include "Windows.h"
-#define _AFXDLL
+#include "Windows.h"
+//#define _AFXDLL
 #include "stdio.h"
 #include "string.h"
 #include "stdlib.h"
-#include "afx.h"
+//#include "afx.h"
 
 #pragma once
 #define MAX_LINE 100
@@ -59,7 +59,7 @@ TCHAR *Key_Get(LPCWSTR section, LPCWSTR key, TCHAR buff[], int Max_line, LPCWSTR
 
 
 
-void main()
+void main2()
 {
 	LPCWSTR feilname = L"..\\..\\..\\Ini.ini";  //文件目录
 
@@ -92,17 +92,17 @@ void main()
 
 
 
-void main1()
+void main()
 {
-	char *feilname = "..\\..\\..\\Ini.ini";
-	char *section = "1223";
-	char *key = "y";
+	char *feilname = "E:\\Algorithm_Questions\\Practice\\Algorithm\\Algorithm\\config\\01_ContainsNearbyDuplicate.ini";
+	char *section = "123";
+	char *key = "Array";
 	char    IP_addr_1[128] = { '\0' };
 	GetPrivateProfileStringA(section, key, NULL, IP_addr_1, sizeof(IP_addr_1), feilname);//结果123
 	printf("%s\n", IP_addr_1);
 
 
-	char buf[200];
+/*	char buf[200];
 	GetPrivateProfileSectionA(section, buf, 200, feilname);//x=5
 	
 	int a = strlen(buf);
@@ -113,7 +113,7 @@ void main1()
 		printf("%c", buf[i]);
 	}
 
-	system("pause");
+	system("pause");*/
 }
 
 
